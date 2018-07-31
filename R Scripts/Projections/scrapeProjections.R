@@ -1,3 +1,5 @@
+setwd("C:GitHub/FantasyFootballAnalyticsR")
+
 source("R Scripts/Functions/scrapeFunctions.R")
 source("R Scripts/Functions/dualPositionData.R")
 source("R Scripts/Functions/adjustFieldGoalStats.R")
@@ -9,7 +11,7 @@ require(pbapply)
 require(XLConnect)
 
 # Set week and season to desired period. Set weekNo = 0 for season data.
-scrapePeriod = c(weekNo = 0, season = 2015)
+scrapePeriod = c(weekNo = 0, season = 2018)
 
 # Set type of league: standard, ppr or half
 leagueType <- "standard"
@@ -19,7 +21,7 @@ scrapeAnalysts <- c(
                       "cbav"  # CBS: CBS Average
                   # , "jaei"  # CBS: Jamey Eisenberg
                   # , "dari"  # CBS: Dave Richard
-                    , "yasp"  # Yahoo Sports
+                  # , "yasp"  # Yahoo Sports
                     , "essit" # ESPN
                   #  , "nfla"  # NFL
                   #  , "fosp"  # FOX Sports
@@ -46,7 +48,7 @@ scrapeAnalysts <- c(
                     )
 
 # Add login for footballguys if you have one
-logins <- list(footballguys = c(user = "", pwd = ""))
+# logins <- list(footballguys = c(user = "", pwd = ""))
 
 # Generate the data URLs based on which analysts are selected above. 
 dataUrls <- createUrls(weekNo = scrapePeriod[["weekNo"]], 

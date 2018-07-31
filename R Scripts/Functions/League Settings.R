@@ -44,16 +44,16 @@ passCompMultiplier <- 0     #0 pts per passing completion
 passIncompMultiplier <- 0   #0 pts per passing incompletion
 passYdsMultiplier <- (1/25) #1 pt per 25 passing yds
 passTdsMultiplier <- 4      #4 pts per passing td
-passIntMultiplier <- -3     #-3 pts per passing interception
+passIntMultiplier <- -2     #-3 pts per passing interception
 rushAttMultiplier <- 0      #0 pts per rushing attempt
 rushYdsMultiplier <- (1/10) #1 pt per 10 rushing yds
 rushTdsMultiplier <- 6      #6 pts per rushing touchdown
 recMultiplier <- 0          #0 pts per reception
-recYdsMultiplier <- (1/8)   #1 pt per 8 receiving yds
+recYdsMultiplier <- (1/10)   #1 pt per 8 receiving yds
 recTdsMultiplier <- 6       #6 pts per receiving touchdown
 returnTdsMultiplier <- 6    #6 pts per return touchdown
 twoPtsMultiplier <- 2       #2 pts per 2-point conversion
-fumlMultiplier <- -3        #-3 pts per fumble lost
+fumlMultiplier <- -2        #-3 pts per fumble lost
 
 scoringRules <- list(
     QB = data.frame(dataCol = c("passYds", "passTds", "passInt", "rushYds", "rushTds", "twoPts", "fumbles"),
